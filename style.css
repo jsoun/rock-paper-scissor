@@ -15,7 +15,6 @@ button {
   display: flex;
   justify-content: center;
   gap: 60px;
-  margin-bottom: 20px;
   font-size: 20px;
 }
 
@@ -24,6 +23,7 @@ button {
   justify-content: center;
   gap: 80px;
   font-size: 50px;
+  margin: -40px 0;
 }
 
 .buttons {
@@ -33,5 +33,9 @@ button {
 }
 
 #message {
+  text-align: center;
+}
+
+.turns {
   text-align: center;
 }

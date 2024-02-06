@@ -22,6 +22,14 @@ function gameSystem() {
   }
 }
 
+// displays the current turns after each button click
+const turns = document.querySelector(".turns");
+let numTurn = 0;
+function increment() {
+  numTurn = numTurn + 1;
+  turns.textContent = "Current Turn: " + numTurn;
+}
+
 // randomizes the computer signs
 function computerChoice() {
   const randomSigns = Math.floor(Math.random() * signs.length);
@@ -33,16 +41,19 @@ rock.addEventListener("click", function () {
   player.textContent = signs[0];
   computerChoice();
   gameSystem();
+  increment();
 });
 
 paper.addEventListener("click", function () {
   player.textContent = signs[1];
   computerChoice();
   gameSystem();
+  increment();
 });
 
 scissor.addEventListener("click", function () {
   player.textContent = signs[2];
   computerChoice();
   gameSystem();
+  increment();
 });
